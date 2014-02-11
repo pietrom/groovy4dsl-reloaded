@@ -1,0 +1,11 @@
+task hello {
+	doLast {
+		println "Last"
+	}
+
+	doFirst {
+		println "First"
+	}
+
+	println "And this one?"
+}
