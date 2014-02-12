@@ -1,2 +1,7 @@
 # Gradle working dir
 .gradle
+
+# Eclipse metadata files
+.project
+.classpath
+.settings
