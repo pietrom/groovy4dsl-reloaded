@@ -1,12 +1,20 @@
 defaultTasks 'hi'
 
-task hello {
+task init (dependsOn: 'clean') << {
+	println "Init"
+}
+
+task clean << {
+	println "Clean"
+}
+
+task hello (dependsOn: 'init') {
 	doFirst {
 		println "Hello, World!"
 	}
 }
 
-task hi (dependsOn : 'hello') {
+task hi (dependsOn : ['hello', 'init'] ) {
 	doFirst {
 		println "Hi, World!"
 	}
