@@ -1,5 +1,13 @@
+defaultTasks 'hi'
+
 task hello {
 	doFirst {
 		println "Hello, World!"
+	}
+}
+
+task hi {
+	doFirst {
+		println "Hi, World!"
 	}
 }
