@@ -1,0 +1,13 @@
+defaultTasks 'hi'
+
+task hello {
+	doFirst {
+		println "Hello, World!"
+	}
+}
+
+task hi (dependsOn : 'hello') {
+	doFirst {
+		println "Hi, World!"
+	}
+}
