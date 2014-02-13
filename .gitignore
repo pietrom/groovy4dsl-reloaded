@@ -1,5 +1,6 @@
 # Gradle working dir
 .gradle
+build
 
 # Eclipse metadata files
 .project
