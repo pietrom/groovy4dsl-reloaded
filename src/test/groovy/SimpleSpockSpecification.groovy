@@ -20,4 +20,16 @@ class SimpleSpockSpecification extends Specification {
 	    then: "Copernicus was telling the truth"
         	! copernicusWasWrong
 	}
+
+	void "we can extend Spock specs with and blocks" () {
+ 	   given: "Two Integer numbers"
+        	Number a = 10
+	        Number b = 5
+
+	    expect: "Integer multiplication is commutative"
+        	a * b == b * a
+
+	    and: "Integer addition is commutative"
+        	a + b == b + a
+	}
 }
