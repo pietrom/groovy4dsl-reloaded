@@ -6,3 +6,6 @@ build
 .project
 .classpath
 .settings
+
+# Eclipse working dir
+bin
