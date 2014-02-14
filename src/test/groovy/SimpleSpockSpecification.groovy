@@ -9,7 +9,7 @@ class SimpleSpockSpecification extends Specification {
 	            truth
 	}
 
-	void "two wrongs don't make a right" () {
+	def "two wrongs don't make a right" () {
 	    given: "two false statements"
         	def theWorldIsFlat = false
 	        def theEarthOrbitsTheSun = false
@@ -21,7 +21,7 @@ class SimpleSpockSpecification extends Specification {
         	! copernicusWasWrong
 	}
 
-	void "we can extend Spock specs with and blocks" () {
+	def "we can extend Spock specs with and blocks" () {
  	   given: "Two Integer numbers"
         	Number a = 10
 	        Number b = 5
