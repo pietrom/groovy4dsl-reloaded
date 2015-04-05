@@ -1,4 +1,4 @@
-package org.amicofragile.spikes.groovy.spock.ast
+package org.amicofragile.spikes.groovy.ast.transformation
 
 import java.lang.reflect.Modifier
 

@@ -1,4 +1,4 @@
-package org.amicofragile.spikes.groovy.spock.ast
+package org.amicofragile.spikes.groovy.ast.annotation
 
 import java.lang.annotation.ElementType
 import java.lang.annotation.Retention
@@ -7,9 +7,8 @@ import java.lang.annotation.Target
 
 import org.codehaus.groovy.transform.GroovyASTTransformationClass
 
-@Target([ ElementType.TYPE ])
+@Target([ElementType.TYPE])
 @Retention(RetentionPolicy.SOURCE)
-@GroovyASTTransformationClass([ "org.amicofragile.spikes.groovy.spock.ast.PrettyBasicAstTransformation" ])
-public @interface PrettyBasic {
+@GroovyASTTransformationClass(["org.amicofragile.spikes.groovy.ast.transformation.PrettySimpleAstTransformation"])
+public @interface PrettySimple {
 }
-
