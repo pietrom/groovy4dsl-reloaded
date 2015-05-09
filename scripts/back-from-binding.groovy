@@ -13,11 +13,15 @@ binding.innerBlock = { closure ->
 
 def shell = new GroovyShell(binding)
 shell.evaluate(
-"""   outerBlock {
+""" outerBlock {
         innerBlock {
          message = "Hello, World!"
         }
-   }
+	}
+	
+	outerBlock {
+		println message
+	}
 """
 )
 println "caller: " + binding.message
