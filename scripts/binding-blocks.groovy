@@ -28,3 +28,31 @@ block {
 	nestedBlock { 
     	}
 }
+
+binding.block2 = { spec, closure ->
+    def cloned = closure.clone()
+    cloned.delegate = delegate
+    this.enclosing = "block2"
+	        
+    println "${spec} encountered"
+    cloned()
+}
+
+binding.nestedBlock2 = { spec, closure ->
+    assert closure.delegate.enclosing == "block2"
+    def cloned = closure.clone()
+    cloned.delegate = delegate
+    this.enclosing = "nestedBlock2"
+		    
+    println "${spec} encountered"
+    cloned()
+}
+
+block2 ("first block") {
+    	nestedBlock2 ("first nested"){   
+    	}
+}
+block2 "second block", {
+    	nestedBlock2 ("second nested"){   
+	}
+}
